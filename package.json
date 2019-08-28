@@ -1,0 +1,44 @@
+{
+  "name": "node-ts-boilerplate",
+  "version": "1.0.0",
+  "description": ":hotsprings: Node boilerplate with TypeScript compliation",
+  "main": "build/index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.2.2",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2",
+    "ts-node": "^8.3.0",
+    "tsconfig-paths": "^3.8.0",
+    "typescript": "^3.5.3"
+  },
+  "scripts": {
+    "start": "npm run build:live",
+    "build": "rm -rf ./build && tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' -r tsconfig-paths/register src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/o8e/node-ts-boilerplate.git"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "boilerplate",
+    "eslint",
+    "prettier"
+  ],
+  "author": "Ollie Tribe <tribe@myself.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/o8e/node-ts-boilerplate/issues"
+  },
+  "homepage": "https://github.com/o8e/node-ts-boilerplate#readme"
+}
