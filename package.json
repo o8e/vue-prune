@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": ":hotsprings: Node boilerplate with TypeScript compliation",
   "main": "build/index.js",
-  "dependencies": {},
+  "dependencies": {
+    "readline-promise": "^1.0.4",
+    "recursive-readdir": "^2.2.2"
+  },
   "devDependencies": {
+    "@types/recursive-readdir": "^2.2.0",
     "eslint": "^6.2.2",
     "eslint-config-prettier": "^6.1.0",
     "eslint-config-standard": "^14.1.0",
