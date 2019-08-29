@@ -67,7 +67,7 @@ const init = async () => {
     const unused = [
       ...components.filter(x => !unique.includes(x)),
       ...unique.filter(x => !components.includes(x))
-    ]
+    ].map(value => value.trim().split('/')[1])
 
     return unused
   } catch (err) {
