@@ -4,10 +4,10 @@ import recursive from 'recursive-readdir'
 import readline from 'readline'
 import fs from 'fs'
 
-const homedir = `./`
+const dir = './'
 
 const getComponents = async () => {
-  const files = await recursive(homedir, ['!*.vue'])
+  const files = await recursive(dir, ['!*.vue'])
   return files.map(file => {
     const name = file.match(/.+(\/.+)\.vue$/)
     return name ? name[1] : ''
@@ -15,7 +15,7 @@ const getComponents = async () => {
 }
 
 const getFiles = async () => {
-  return recursive(homedir, ['!*.{js,ts,vue}'])
+  return recursive(dir, ['!*.{js,ts,vue}'])
 }
 
 const getImports = (file: string, onLine: any) => {
