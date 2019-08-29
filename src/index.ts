@@ -1,9 +1,10 @@
+#!/usr/bin/env node
+
 import recursive from 'recursive-readdir'
-import os from 'os'
+import readline from 'readline'
 import fs from 'fs'
 
-const readline = require('readline-promise').default
-const homedir = `${os.homedir()}/Code/cazana/trade-portal/src`
+const homedir = `./`
 
 const getComponents = async () => {
   const files = await recursive(homedir, ['!*.vue'])
@@ -28,7 +29,7 @@ const getImports = (file: string, onLine: any) => {
   return new Promise(resolve => reader.on('close', resolve))
 }
 
-const init = async () => {
+const run = async () => {
   try {
     // get .vue file names
     const components = await getComponents()
@@ -69,10 +70,10 @@ const init = async () => {
       ...unique.filter(x => !components.includes(x))
     ].map(value => value.trim().split('/')[1])
 
-    return unused
+    console.log(unused)
   } catch (err) {
     throw err
   }
 }
 
-init()
+run()

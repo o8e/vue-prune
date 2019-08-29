@@ -1,10 +1,12 @@
 {
-  "name": "node-ts-boilerplate",
+  "name": "vue-prune",
   "version": "1.0.0",
-  "description": ":hotsprings: Node boilerplate with TypeScript compliation",
+  "description": ":scissors: Find unused Vue components in your code",
   "main": "build/index.js",
+  "bin": {
+    "vue-prune": "build/index.js"
+  },
   "dependencies": {
-    "readline-promise": "^1.0.4",
     "recursive-readdir": "^2.2.2"
   },
   "devDependencies": {
@@ -30,19 +32,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/o8e/node-ts-boilerplate.git"
+    "url": "git+https://github.com/o8e/vue-prune.git"
   },
   "keywords": [
     "nodejs",
-    "typescript",
-    "boilerplate",
-    "eslint",
-    "prettier"
+    "vuejs",
+    "cli",
+    "performance",
+    "refactor"
   ],
   "author": "Ollie Tribe <tribe@myself.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/o8e/node-ts-boilerplate/issues"
+    "url": "https://github.com/o8e/vue-prune/issues"
   },
-  "homepage": "https://github.com/o8e/node-ts-boilerplate#readme"
+  "homepage": "https://github.com/o8e/vue-prune#readme"
 }
