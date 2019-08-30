@@ -1,6 +1,6 @@
 {
   "name": "vue-prune",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": ":scissors: Find unused Vue components in your code",
   "main": "build/index.js",
   "bin": {
